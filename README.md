@@ -7,15 +7,15 @@ Hay dos versiones del sistema, una primera que sigue las indicaciones del
 enunciado y una segunda que es un experimento inspirado en la API de Spark.
 Para poder utilizar la 1ª versión se tiene que realizar los siguientes pasos:
 
-```# Compilar:
-erlc mapredsrv.erl
-erlc mapredwrk.erl
-erlc mrs_util.erl
-erlc test1.erl
-# Ejecutar el ejemplo del enunciado:
-erl.exe -s test1 example1
-# Ejecutar el segundo ejemplo:
-erl.exe -s test1 example2```
+\# Compilar:<br/>
+erlc mapredsrv.erl<br/>
+erlc mapredwrk.erl<br/>
+erlc mrs_util.erl<br/>
+erlc test1.erl<br/>
+\# Ejecutar el ejemplo del enunciado:<br/>
+erl.exe -s test1 example1<br/>
+\# Ejecutar el segundo ejemplo:<br/>
+erl.exe -s test1 example2
 
 El segundo ejemplo es un simple contador de palabras, para esta ocasión se ha
 escogido la letra de una canción.
@@ -23,32 +23,32 @@ escogido la letra de una canción.
 En la segunda versión para poder darle uso primero hay que compilar los
 siguientes módulos:
 
-```erlc mrs_api.erl
-erlc mrs_db.erl
-erlc mrs_jlogic.erl
-erlc mrs_job.erl
-erlc mrs_jtask.erl
-erlc mrs_planner.erl
-erlc mrs_util.erl
-erlc mrs_worker.erl
-erlc test2.erl```
+erlc mrs_api.erl<br/>
+erlc mrs_db.erl<br/>
+erlc mrs_jlogic.erl<br/>
+erlc mrs_job.erl<br/>
+erlc mrs_jtask.erl<br/>
+erlc mrs_planner.erl<br/>
+erlc mrs_util.erl<br/>
+erlc mrs_worker.erl<br/>
+erlc test2.erl
 
 Después se puede levantar varios nodos utilizando el nombre corto dentro de
 una misma máquina:
 
-```gnome-terminal -e 'erl.exe -sname N0'
-gnome-terminal -e 'erl.exe -sname N1'
-gnome-terminal -e 'erl.exe -sname N2'
-gnome-terminal -e 'erl.exe -sname N3'```
+gnome-terminal -e 'erl.exe -sname N0'<br/>
+gnome-terminal -e 'erl.exe -sname N1'<br/>
+gnome-terminal -e 'erl.exe -sname N2'<br/>
+gnome-terminal -e 'erl.exe -sname N3'
 
 Desde uno de los nodos se puede ejecutar algunos ejemplos:
 
-```test2:start().    % Para arrancar el planificador.
-test2:example().  % Para ejecutar el ejemplo del enunciado.
-test2:example1(). % Para ejecutar un contador de palabras.
-test2:example2(). % Para ejecutar un ejemplo sobre un log de accesos.
-test2:example3(). % Para ejecutar un ejemplo sobre un log de temperaturas.
-test2:example4(). % Para ejecutar un ejemplo sobre un log de palabras.```
+test2:start().    % Para arrancar el planificador.<br/>
+test2:example().  % Para ejecutar el ejemplo del enunciado.<br/>
+test2:example1(). % Para ejecutar un contador de palabras.<br/>
+test2:example2(). % Para ejecutar un ejemplo sobre un log de accesos.<br/>
+test2:example3(). % Para ejecutar un ejemplo sobre un log de temperaturas.<br/>
+test2:example4(). % Para ejecutar un ejemplo sobre un log de palabras.
 
 En la propuesta por el enunciado se ha utilizado el comportamiento gen_server
 para el maestro de las peticiones de map-reduce, también se utilizaron tablas
@@ -106,5 +106,5 @@ Además de todo esto está en la carpeta edoc un módulo que de ejecutarse nos
 generará la documentación de los módulos de la carpeta del proyecto. Para
 ejecutarlo hay que realizar los siguientes pasos:
 
-```erlc zdoc.erl
-erl -noshell -s zdoc run -s init stop```
+erlc zdoc.erl<br/>
+erl -noshell -s zdoc run -s init stop
