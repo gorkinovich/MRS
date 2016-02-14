@@ -1,0 +1,5 @@
+//hgignorefile
+syntax: glob
+.git/
+typer_ann/
+*.beam
